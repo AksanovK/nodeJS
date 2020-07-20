@@ -1,0 +1,12 @@
+GET http://localhost/profile
+
+###
+
+POST http://localhost/profile
+Content-Type: application/json
+
+{
+  "name" : "MegaMarcel"
+}
+
+###

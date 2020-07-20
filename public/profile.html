@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <title>О себе</title>
+  
+</head>
+<body>
+
+    <div class="container-fluid h-100">
+     <div class="row align-items-center h-100">
+        <div class="col-sm-12">
+            <div class="row justify-content-center">
+                <div class="col-4 text-center">
+                    <div class = "container-fluid">
+                      <h1>О себе</h1>
+                     
+                       <h5>
+                        <ul class = "list-group">
+                          <li class = "list-group-item">ФИО: Аксанов Камиль Ниязович</li>
+                          <li class = "list-group-item">Возраст: 19</li>
+                          <li class = "list-group-item">Цель: получить должность программиста</li>
+                          <li class = "list-group-item">Телефон: 89191118822</li>
+                          <li class = "list-group-item">Опыт: нет</li>
+                          <li class = "list-group-item">Владение яп: java</li>
+                          <li class = "list-group-item">Почта: aksanovkamil@gmail.com</li>
+                        </ul> </h5>
+                      </div>
+                      <div class = "pb-3">
+                        <div class = "container-fluid">
+                          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Оставить заявку</button> 
+                        </div>
+                      </div>
+
+                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                                <!--<span aria-hidden="true">×</span>-->
+                                  
+                                </button>
+                                <div class = "container-fluid">
+                                  <h4 class="modal-title" id="myModalLabel">Заполните форму!</h4>
+                                </div>
+                              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                              <div class="modal-body">
+                                <form autocomplete="off" id="contact-form" name="contact-form" action="/user" method="POST">
+                                  <div class="form-group">
+                                    <label for="email">Email адрес</label>
+                                    <input type="text" id="mail" name="mail" class="form-control" placeholder="Введите email"></div>
+                                    <div class="form-group">
+                                      <label for="tel" autocomplete="off">Телефон</label>
+                                      <input name="tel" id="tel"
+                                      name="tel" class="form-control" id="myModalLabel1" placeholder="Введите телефон">
+                                    </div><div class="form-group">
+                                      <label for="myModalLabel">Имя</label>
+                                      <input name="name" type="text" class="form-control" id="name"
+                                      name="name" placeholder="Введите имя">
+                                    </div>
+
+                                    <p><input type="submit" value="Отправить" formaction="/user" formmethod="post"></p>
+
+                                  </form>
+                                </div>
+
+
+
+
+
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                  <button class="btn btn-primary" id="butsave">Отправить</button>
+
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div> 
+
+                              <!--<div class="button">
+                                <button class ="btn btn-primary " onclick="getUsers()">Выдача данных</button>
+                                
+                              </div>-->
+                    <div class="button">
+                        <a class="btn btn-primary" href="data.html" >Выдать данные</a>
+                    </div>
+                              <table class="table m-3">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Telephone number</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="users_table"></tbody>
+                              </table>
+
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+                     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+                     <script
+                       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                       crossorigin="anonymous"
+                     ></script>
+                     <script
+                       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                       crossorigin="anonymous"
+                     ></script>
+                     <script src="main.js"></script>                    
+
+</body>
+</html>
