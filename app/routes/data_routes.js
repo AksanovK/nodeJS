@@ -1,6 +1,19 @@
 bodyParser = require('body-parser').json();
 module.exports = function (app) {
     app.get('/data.html', (request, response) => {
+    	var fs = require('fs');
+    	var file_readed = fs.readFileSync('some_new_file.txt', 'utf8');
+        var result = [{
+            "id": 1,
+            "data": file_readed
+        },
+        ];
+        response.send(JSON.stringify(result));
+    });
+
+
+    /* 
+    app.get('/data.html', (request, response) => {
         var result = [{
             "id": 1,
             "data": "FIO: Аксанов Камиль Ниязович"
@@ -32,6 +45,11 @@ module.exports = function (app) {
         ];
         response.send(JSON.stringify(result));
     });
+    */
+
+
+
+
     /*app.post('/profile.html', bodyParser, (request, response) => {
         let body = request.body;
         fs=require(body);
@@ -54,9 +72,11 @@ module.exports = function (app) {
     }); */
 
      app.post('/user', bodyParser, (request, response) => {
-        
+        var fs = require('fs');
         let body = request.body;
-
+        var message = "Завяка:\n" + body["name"] + ' ' + 
+        body["tel"] + ' ' + body["mail"] + '\n';
+        fs.writeFileSync('some_new_file.txt', message);
 
         console.log("Заявка:");
         console.log(body["name"]);
